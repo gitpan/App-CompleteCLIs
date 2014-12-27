@@ -1,0 +1,185 @@
+#!perl
+
+# Note: This script is a CLI interface to Riap function /Complete/Riap/complete_riap_url
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
+
+our $DATE = '2014-12-27'; # DATE
+our $VERSION = '0.01'; # VERSION
+
+use 5.010001;
+use strict;
+use warnings;
+
+use Perinci::CmdLine::Any -prefer_lite=>1;
+
+Perinci::CmdLine::Any->new(
+    url => "/Complete/Riap/complete_riap_url",
+)->run;
+
+# ABSTRACT: Complete Riap URL
+# PODNAME: complete-riap-url
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+complete-riap-url - Complete Riap URL
+
+=head1 VERSION
+
+This document describes version 0.01 of complete-riap-url (from Perl distribution App-CompleteCLIs), released on 2014-12-27.
+
+=head1 SYNOPSIS
+
+Usage:
+
+ % complete-riap-url [options] <word>
+
+=head1 DESCRIPTION
+
+Currently only support local Perl schemes (e.g. C</Pkg/Subpkg/function> or
+C<pl:/Pkg/Subpkg/>).
+
+=head1 OPTIONS
+
+C<*> marks required options.
+
+=over
+
+=item B<--ci>
+
+Whether to do case-insensitive search.
+
+=item B<--config-path>=I<s>
+
+Set path to configuration file.
+
+Can be specified multiple times.
+
+=item B<--config-profile>=I<s>
+
+Set configuration profile to use.
+
+=item B<--exp-im-path>
+
+=item B<--format>=I<s>
+
+Choose output format, e.g. json, text.
+
+=item B<--help>, B<-h>, B<-?>
+
+Display this help message.
+
+=item B<--json>
+
+Set output format to json.
+
+=item B<--map-case>
+
+=item B<--naked-res>
+
+When outputing as JSON, strip result envelope.
+
+By default, when outputing as JSON, the full enveloped result is returned, e.g.:
+
+    [200,"OK",[1,2,3],{"func.extra"=>4}]
+
+The reason is so you can get the status (1st element), status message (2nd
+element) as well as result metadata/extra result (4th element) instead of just
+the result (3rd element). However, sometimes you want just the result, e.g. when
+you want to pipe the result for more post-processing. In this case you can use
+`--naked-res` so you just get:
+
+    [1,2,3]
+
+
+=item B<--no-config>
+
+Do not use any configuration file.
+
+=item B<--riap-client-json>=I<s>
+
+See C<--riap-client>.
+
+=item B<--riap-client>=I<s>
+
+=item B<--type>=I<s>
+
+Filter by entity type.
+
+Valid values:
+
+ ["function", "package"]
+
+=item B<--version>, B<-v>
+
+=item B<--word>=I<s>*
+
+=back
+
+=head1 FILES
+
+B</etc/complete-riap-url.conf>
+
+B<~/complete-riap-url.conf>
+
+=head1 COMPLETION
+
+This script has shell tab completion capability with support for several shells.
+
+=head2 bash
+
+To activate bash completion for this script, put:
+
+ complete -C complete-riap-url complete-riap-url
+
+in your bash startup (e.g. C<~/.bashrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
+
+It is recommended, however, that you install L<shcompgen> which allows you to activate completion scripts for several kinds of scripts on multiple shells. Some CPAN distributions (those that are built with L<Dist::Zilla::Plugin::GenShellCompletion>) will even automatically enable shell completion for their included scripts (using C<shcompgen>) at installation time, so you can immadiately have tab completion.
+
+=head2 tcsh
+
+To activate tcsh completion for this script, put:
+
+ complete complete-riap-url 'p/*/`complete-riap-url`/'
+
+in your tcsh startup (e.g. C<~/.tcshrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
+
+It is also recommended to install C<shcompgen> (see above).
+
+=head2 other shells
+
+For fish and zsh, install C<shcompgen> as described above.
+
+=head1 HOMEPAGE
+
+Please visit the project's homepage at L<https://metacpan.org/release/App-CompleteCLIs>.
+
+=head1 SOURCE
+
+Source repository is at L<https://github.com/perlancar/perl-App-CompleteCLIs>.
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website L<https://rt.cpan.org/Public/Dist/Display.html?Name=App-CompleteCLIs>
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
+=head1 AUTHOR
+
+perlancar <perlancar@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by perlancar@cpan.org.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
