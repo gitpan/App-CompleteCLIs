@@ -10,7 +10,7 @@
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
+      "version" : 2
    },
    "name" : "App-CompleteCLIs",
    "prereqs" : {
@@ -32,7 +32,10 @@
          "requires" : {
             "Complete" : "0.06",
             "Complete::Bash::History" : "0",
+            "Complete::Dist" : "0",
+            "Complete::Dist::Zilla" : "0",
             "Complete::Getopt::Long" : "0",
+            "Complete::Pod::Weaver" : "0",
             "Complete::Riap" : "0",
             "Complete::Unix" : "0.03",
             "Complete::Util" : "0.21",
@@ -62,16 +65,16 @@
          "web" : "https://github.com/perlancar/perl-App-CompleteCLIs"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.018001"
+         "version" : "5.018002"
       },
       "plugins" : [
          {
             "class" : "Dist::Zilla::Plugin::Rinci::ScriptFromFunc",
             "name" : "Rinci::ScriptFromFunc",
-            "version" : "0.03"
+            "version" : "0.04"
          },
          {
             "class" : "Dist::Zilla::Plugin::GatherDir",
@@ -291,7 +294,7 @@
                      {
                         "class" : "Pod::Weaver::Section::Completion::PerinciCmdLine",
                         "name" : "@Author::PERLANCAR/Completion::PerinciCmdLine",
-                        "version" : "0.08"
+                        "version" : "0.09"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Homepage::DefaultCPAN",

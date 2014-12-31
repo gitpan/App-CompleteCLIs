@@ -7,6 +7,10 @@ META.yml
 Makefile.PL
 README
 bin/complete-array-elem
+bin/complete-dist
+bin/complete-dzil-bundle
+bin/complete-dzil-plugin
+bin/complete-dzil-role
 bin/complete-env
 bin/complete-file
 bin/complete-gid
@@ -19,6 +23,10 @@ bin/complete-program
 bin/complete-riap-url
 bin/complete-uid
 bin/complete-user
+bin/complete-weaver-bundle
+bin/complete-weaver-plugin
+bin/complete-weaver-role
+bin/complete-weaver-section
 dist.ini
 lib/App/CompleteCLIs.pm
 t/00-compile.t

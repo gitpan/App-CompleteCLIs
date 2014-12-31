@@ -18,7 +18,15 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "App-CompleteCLIs",
   "EXE_FILES" => [
+    "bin/complete-dist",
+    "bin/complete-dzil-bundle",
+    "bin/complete-dzil-plugin",
+    "bin/complete-dzil-role",
     "bin/complete-module",
+    "bin/complete-weaver-bundle",
+    "bin/complete-weaver-plugin",
+    "bin/complete-weaver-role",
+    "bin/complete-weaver-section",
     "bin/complete-riap-url",
     "bin/complete-uid",
     "bin/complete-gid",
@@ -38,7 +46,10 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Complete" => "0.06",
     "Complete::Bash::History" => 0,
+    "Complete::Dist" => 0,
+    "Complete::Dist::Zilla" => 0,
     "Complete::Getopt::Long" => 0,
+    "Complete::Pod::Weaver" => 0,
     "Complete::Riap" => 0,
     "Complete::Unix" => "0.03",
     "Complete::Util" => "0.21",
@@ -51,7 +62,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -61,7 +72,10 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Complete" => "0.06",
   "Complete::Bash::History" => 0,
+  "Complete::Dist" => 0,
+  "Complete::Dist::Zilla" => 0,
   "Complete::Getopt::Long" => 0,
+  "Complete::Pod::Weaver" => 0,
   "Complete::Riap" => 0,
   "Complete::Unix" => "0.03",
   "Complete::Util" => "0.21",

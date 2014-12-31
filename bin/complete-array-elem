@@ -1,16 +1,19 @@
 #!perl
 
 # Note: This script is a CLI interface to Riap function /Complete/Util/complete_array_elem
-# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.04
 
-our $DATE = '2014-12-27'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $DATE = '2014-12-31'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
 use warnings;
 
 use Perinci::CmdLine::Any -prefer_lite=>1;
+
+# snippet_before_instantiate_cmdline
+use Complete::Util;
 
 Perinci::CmdLine::Any->new(
     url => "/Complete/Util/complete_array_elem",
@@ -31,7 +34,7 @@ complete-array-elem - Complete from array
 
 =head1 VERSION
 
-This document describes version 0.01 of complete-array-elem (from Perl distribution App-CompleteCLIs), released on 2014-12-27.
+This document describes version 0.02 of complete-array-elem (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
 
 =head1 SYNOPSIS
 

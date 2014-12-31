@@ -1,6 +1,6 @@
 #!perl
 
-# Note: This script is a CLI interface to Riap function /Complete/Unix/complete_proc_name
+# Note: This script is a CLI interface to Riap function /Complete/Dist/Zilla/complete_dzil_role
 # and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.04
 
 our $DATE = '2014-12-31'; # DATE
@@ -13,11 +13,11 @@ use warnings;
 use Perinci::CmdLine::Any -prefer_lite=>1;
 
 Perinci::CmdLine::Any->new(
-    url => "/Complete/Unix/complete_proc_name",
+    url => "/Complete/Dist/Zilla/complete_dzil_role",
 )->run;
 
-# ABSTRACT: Complete from list of process names
-# PODNAME: complete-proc-name
+# ABSTRACT: Complete with installed Dist::Zilla role names
+# PODNAME: complete-dzil-role
 
 __END__
 
@@ -27,17 +27,17 @@ __END__
 
 =head1 NAME
 
-complete-proc-name - Complete from list of process names
+complete-dzil-role - Complete with installed Dist::Zilla role names
 
 =head1 VERSION
 
-This document describes version 0.02 of complete-proc-name (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
+This document describes version 0.02 of complete-dzil-role (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
 
 =head1 SYNOPSIS
 
 Usage:
 
- % complete-proc-name [options] <word>
+ % complete-dzil-role [options] <word>
 
 =head1 OPTIONS
 
@@ -46,6 +46,8 @@ C<*> marks required options.
 =over
 
 =item B<--ci>
+
+Whether to do case-insensitive search.
 
 =item B<--config-path>=I<s>
 
@@ -56,6 +58,8 @@ Can be specified multiple times.
 =item B<--config-profile>=I<s>
 
 Set configuration profile to use.
+
+=item B<--exp-im-path>
 
 =item B<--format>=I<s>
 
@@ -68,6 +72,8 @@ Display this help message.
 =item B<--json>
 
 Set output format to json.
+
+=item B<--map-case>
 
 =item B<--naked-res>
 
@@ -94,17 +100,13 @@ Do not use any configuration file.
 
 =item B<--word>=I<s>*
 
-Default value:
-
- ""
-
 =back
 
 =head1 FILES
 
-B</etc/complete-proc-name.conf>
+B</etc/complete-dzil-role.conf>
 
-B<~/complete-proc-name.conf>
+B<~/complete-dzil-role.conf>
 
 =head1 COMPLETION
 
@@ -114,7 +116,7 @@ This script has shell tab completion capability with support for several shells.
 
 To activate bash completion for this script, put:
 
- complete -C complete-proc-name complete-proc-name
+ complete -C complete-dzil-role complete-dzil-role
 
 in your bash startup (e.g. C<~/.bashrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
 
@@ -124,7 +126,7 @@ It is recommended, however, that you install L<shcompgen> which allows you to ac
 
 To activate tcsh completion for this script, put:
 
- complete complete-proc-name 'p/*/`complete-proc-name`/'
+ complete complete-dzil-role 'p/*/`complete-dzil-role`/'
 
 in your tcsh startup (e.g. C<~/.tcshrc>). Your next shell session will then recognize tab completion for the command. Or, you can also directly execute the line above in your shell to activate immediately.
 

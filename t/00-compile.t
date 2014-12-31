@@ -6,7 +6,7 @@ use warnings;
 
 use Test::More;
 
-plan tests => 14 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+plan tests => 22 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 my @module_files = (
     'App/CompleteCLIs.pm'
@@ -14,6 +14,10 @@ my @module_files = (
 
 my @scripts = (
     'bin/complete-array-elem',
+    'bin/complete-dist',
+    'bin/complete-dzil-bundle',
+    'bin/complete-dzil-plugin',
+    'bin/complete-dzil-role',
     'bin/complete-env',
     'bin/complete-file',
     'bin/complete-gid',
@@ -25,7 +29,11 @@ my @scripts = (
     'bin/complete-program',
     'bin/complete-riap-url',
     'bin/complete-uid',
-    'bin/complete-user'
+    'bin/complete-user',
+    'bin/complete-weaver-bundle',
+    'bin/complete-weaver-plugin',
+    'bin/complete-weaver-role',
+    'bin/complete-weaver-section'
 );
 
 # no fake home requested

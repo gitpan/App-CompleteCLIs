@@ -1,7 +1,7 @@
 package App::CompleteCLIs;
 
-our $DATE = '2014-12-27'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $DATE = '2014-12-31'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
@@ -22,7 +22,7 @@ App::CompleteCLIs - CLI wrappers for complete_*() functions
 
 =head1 VERSION
 
-This document describes version 0.01 of App::CompleteCLIs (from Perl distribution App-CompleteCLIs), released on 2014-12-27.
+This document describes version 0.02 of App::CompleteCLIs (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
 
 =head1 SYNOPSIS
 

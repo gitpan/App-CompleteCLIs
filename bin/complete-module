@@ -1,10 +1,10 @@
 #!perl
 
 # Note: This script is a CLI interface to Riap function /Complete/Module/complete_module
-# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.04
 
-our $DATE = '2014-12-27'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $DATE = '2014-12-31'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
@@ -16,7 +16,7 @@ Perinci::CmdLine::Any->new(
     url => "/Complete/Module/complete_module",
 )->run;
 
-# ABSTRACT: Complete Perl module names
+# ABSTRACT: Complete with installed Perl module names
 # PODNAME: complete-module
 
 __END__
@@ -27,11 +27,11 @@ __END__
 
 =head1 NAME
 
-complete-module - Complete Perl module names
+complete-module - Complete with installed Perl module names
 
 =head1 VERSION
 
-This document describes version 0.01 of complete-module (from Perl distribution App-CompleteCLIs), released on 2014-12-27.
+This document describes version 0.02 of complete-module (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
 
 =head1 SYNOPSIS
 
@@ -50,7 +50,9 @@ This function has a bit of overlapping functionality with C<Module::List>, but
 this function is geared towards shell tab completion. Compared to
 C<Module::List>, here are some differences: 1) list modules where prefix is
 incomplete; 2) interface slightly different; 3) (currently) doesn't do
-recursing.
+recursing; 4) contains conveniences for completion, e.g. map casing, expand
+intermediate paths (see C<Complete> for more details on those features),
+autoselection of path separator character, some shortcuts, and so on.
 
 =head1 OPTIONS
 

@@ -1,10 +1,10 @@
 #!perl
 
 # Note: This script is a CLI interface to Riap function /Complete/Riap/complete_riap_url
-# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.03
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.04
 
-our $DATE = '2014-12-27'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $DATE = '2014-12-31'; # DATE
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
@@ -31,7 +31,7 @@ complete-riap-url - Complete Riap URL
 
 =head1 VERSION
 
-This document describes version 0.01 of complete-riap-url (from Perl distribution App-CompleteCLIs), released on 2014-12-27.
+This document describes version 0.02 of complete-riap-url (from Perl distribution App-CompleteCLIs), released on 2015-12-31.
 
 =head1 SYNOPSIS
 
@@ -100,12 +100,6 @@ you want to pipe the result for more post-processing. In this case you can use
 =item B<--no-config>
 
 Do not use any configuration file.
-
-=item B<--riap-client-json>=I<s>
-
-See C<--riap-client>.
-
-=item B<--riap-client>=I<s>
 
 =item B<--type>=I<s>
 
